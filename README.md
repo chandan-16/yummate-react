@@ -18,3 +18,9 @@ YUMMATE FOOD ORDERING APP
     - Links
     - Address
     - Contact
+
+# React Hooks :
+
+(Normal Javascript Utility functions) 
+    - useState() --> Superpowerful State variables in React
+    - useEffect()
