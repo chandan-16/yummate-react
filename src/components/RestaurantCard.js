@@ -1,7 +1,6 @@
-const RestaurantCard = ({resList}) => {
+const RestaurantCard = ({resData}) => {
 
-    const { name, image, rating,  deliveryTime, cuisines } = resList
-
+    const { name, image, rating,  deliveryTime, cuisines } = resData
 
   return (
     <div className="w-50 h-90 mx-auto shadow m-5 p-2 hover:border-lg rounded text-left">
