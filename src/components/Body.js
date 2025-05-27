@@ -17,16 +17,17 @@ const Body = () => {
   }
 
   return (
-    <div className="p-5">
+    <div className="px-5 py-2">
         <Header />
 
+         
         <div className="filter">
-          <button onClick={() => setListOfRestaurants(listOfRestaurants.filter((restaurant) => restaurant = restaurant.rating > 4))} className="filter-btn px-5 py-3 bg-gray-500 rounded cursor-pointer text-white p-2">Top Rated Restaurants</button>
+          <h1 className="">Restaurants with online food delivery in Pune</h1>
         </div>
         <div className="flex p-10 w-full p-4 flex-wrap justify-center">
           {
             listOfRestaurants.map((restaurant) => (
-              <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+              <RestaurantCard key={restaurant["imageUrl-src"]} restaurant={restaurant} />
             ))
           }
         </div>

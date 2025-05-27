@@ -1,0 +1,47 @@
+.header {
+    background-color: #fff;
+    border: none;
+    padding : 5px 0px;
+    margin : auto;
+    align-content: center;
+    align-items: center;
+} 
+
+.logo-container {
+    align-items: center;
+    font-weight: 700;
+}
+
+.searchInput {
+    padding-left: 15px;
+    border: solid 2px rgb(128, 128, 128);
+    border-top-left-radius:5px ;
+    border-bottom-left-radius:5px;
+}
+
+.searchInput:active {
+    border: solid 2px orange;
+}
+
+.searchButton {
+    padding : 10px 10px;
+    color : #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border : solid 0px gray;
+    background-color: rgb(255, 122, 14);
+}
+
+.bi-search {
+    color : white;
+}
+
+.pageList li {
+    padding : 10px 14px;
+}
+
+.pageList li:hover {
+    color : #fff;
+    border-radius: 5px;
+    background-color: rgb(255, 122, 14);
+}
