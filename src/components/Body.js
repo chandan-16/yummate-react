@@ -1,12 +1,20 @@
 import Header from "./Header"
 import RestaurantCard from "./RestaurantCard";
-import resList from './../utils/mockData';
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
+import RestaurantList from "../data/RestaurantList.json";
+// import RestaurantMenuData from "../data/RestaurantMenuData";
+// import { restaurants } from "../utils/constants";
 
 const Body = () => {
 
-  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurants] = useState(RestaurantList);
+
+
+  // Conditional Rendering 
+  if(listOfRestaurants === 0){
+    return (<Shimmer />)
+  }
 
   return (
     <div className="p-5">
@@ -21,9 +29,7 @@ const Body = () => {
               <RestaurantCard key={restaurant.id} restaurant={restaurant} />
             ))
           }
-
         </div>
-
     </div>
   )
 }
