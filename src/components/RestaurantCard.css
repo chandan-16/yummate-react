@@ -1,0 +1,20 @@
+.restaurantCard {
+    border-radius: 20px;
+}
+
+.restaurantCard:hover {
+    box-shadow: 0px 0px 10px gray;
+}
+
+.restaurantCard .resBanner {
+    border-radius: 15px;
+}
+
+.restaurantCard .title {
+    font-weight: 600;
+}
+
+.restaurantCard .rating {
+    background-color: rgb(39, 221, 39);
+    border-radius: 50%;
+}

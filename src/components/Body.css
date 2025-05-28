@@ -1,0 +1,15 @@
+.searchBox {
+    margin-top: 5px;;
+    border : solid 2px gray;
+    border-radius: 5px;;
+}
+
+.searchIcon {
+    margin-left: 5px;;
+    padding : 10px 10px;
+    border-radius: 5px;
+}
+
+.searchIcon:hover {
+    background-color: rgb(255, 122, 14);
+}

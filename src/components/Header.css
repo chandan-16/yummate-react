@@ -38,10 +38,26 @@
 
 .pageList li {
     padding : 10px 14px;
+   
+    font-size: 16px;
 }
 
 .pageList li:hover {
-    color : #fff;
+
     border-radius: 5px;
-    background-color: rgb(255, 122, 14);
+    cursor: pointer;
+    color: rgb(255, 122, 14);
+}
+
+.nav-items {
+    display : flex;
+    align-items: center;
+}
+
+.login {
+    width : 100px;
+    padding : 7px 16px;
+    border : solid 2px gray;
+    border-radius: 5px;
+    cursor: pointer;
 }
