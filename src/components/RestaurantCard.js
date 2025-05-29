@@ -11,7 +11,7 @@ const RestaurantCard = ({restaurant}) => {
           <span className="pl-1 text-md"> {restaurant.ratingAndTime}</span>
         </p>
         <p className="text-gray-400 text-left pt-2">{restaurant.category}</p>
-        <p>{restaurant.area}</p>
+        <p className="text-gray-400 text-left pt-1">{restaurant.area}</p>
       </div>
   )
 }
