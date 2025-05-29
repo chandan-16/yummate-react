@@ -23,7 +23,7 @@ const Body = () => {
         Restaurants with online{" "}
         <span className="pt-10 font-extrabold text-3xl text-orange-500">
           Food Delivery In Pune
-        </span>{" "}
+        </span>
       </h1>
 
       <div className="filter mx-auto w-115 pt-3">
@@ -35,15 +35,10 @@ const Body = () => {
           value={searchText}
         />
         <button
-          onClick={() =>
-            setListOfRestaurants(
-              listOfRestaurants.filter((res) =>
-                res.title
-                  .toLocaleLowerCase()
-                  .includes(searchText.toLocaleLowerCase())
-              )
-            )
-          }
+          onClick={() => {
+            const filteredList = listOfRestaurants.filter((res) => res.title.toLocaleLowerCase().includes(searchText.toLocaleLowerCase()));
+            setListOfRestaurants(filteredList)
+          }}
           className="cursor-pointer w-10 text-gray-700 bg-gray-500 searchIcon"
         >
           <i className="bi bi-search"></i>
@@ -52,7 +47,7 @@ const Body = () => {
       <div className="flex p-10 w-full p-4 flex-wrap justify-center">
         {listOfRestaurants.map((restaurant) => (
           <RestaurantCard
-            key={restaurant["imageUrl-src"]}
+            key={restaurant['web-scraper-order']}
             restaurant={restaurant}
           />
         ))}
