@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import Logo from "../assets/Logo-yummate.png";
+// import Logo from "../assets/yoshinoya-japaneese-kitchen-logo-png_seeklogo-370699.png";
+import Logo from "../assets/yummate-pink-logo.webp"
 
 import "../components/Header.css"
 
@@ -16,10 +17,10 @@ const Header = () => {
   },[loginBtn])
 
   return (
-    <div className="header flex  mx-auto justify-between  text-center shadow shadow-lg">
+    <div className="header w-full px-20 flex  mx-auto justify-between  text-center shadow shadow-lg">
         <div className="logo-container flex">
-            <img className="w-16 h-16" src={Logo} alt="Yummate Logo" />
-            <h1 className="text-2xl text-gray-700">YUMMATE</h1>
+            <img className="w-16 h-16 logo pb-1" src={Logo} alt="Yummate Logo" />
+            <h1 className="text-2xl text-gray-700 logoText">Yummate</h1>
         </div>
         <div className="searchBox">
 

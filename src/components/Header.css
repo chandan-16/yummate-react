@@ -1,11 +1,20 @@
 .header {
     background-color: #fff;
     border: none;
-    padding : 5px 0px;
+    /* padding : 5px 0px; */
     margin : auto;
     align-content: center;
     align-items: center;
 } 
+
+.header .logoText {
+    font-weight: 800;
+    
+}
+
+.logo {
+    border-radius: 50px;
+}
 
 .logo-container {
     align-items: center;
@@ -39,14 +48,15 @@
 .pageList li {
     padding : 10px 14px;
    
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .pageList li:hover {
 
     border-radius: 5px;
     cursor: pointer;
-    color: rgb(255, 122, 14);
+    color: #F14060;
+ 
 }
 
 .nav-items {
@@ -60,4 +70,6 @@
     border : solid 2px gray;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
 }
+

@@ -3,7 +3,7 @@ import "../components/RestaurantCard.css";
 const RestaurantCard = ({restaurant}) => {
 
   return (
-      <div className="w-95 h-120 mx-auto shadow m-5 p-5 hover:border-lg rounded text-left ml-5 restaurantCard">
+      <div className="w-95 h-120 mx-auto m-2 p-5 text-left restaurantCard">
         <img className="w-95 h-70 resBanner" src={restaurant["imageUrl-src"]} alt="logo" />
         <h3 className="text-lg text-left py-2 title">{restaurant.title}</h3>
         <p className="pt-1 flex">
@@ -16,4 +16,4 @@ const RestaurantCard = ({restaurant}) => {
   )
 }
 
-export default RestaurantCard 
+export default RestaurantCard;

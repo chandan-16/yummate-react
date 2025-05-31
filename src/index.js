@@ -1,46 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import About from './components/About';
-import Body from './components/Body';
 import Contact from './components/Contact';
 import Cart from './components/Cart';
 import Error from './components/Error';
+import Body from './components/Body';
+import Header from './components/Header';
+
+export const AppLayout = () => {
+  return (
+    <div className='app'>
+      <Header />
+      <Body />
+    </div>
+  )
+}
 
 const appRouter = createBrowserRouter([
   {
     path : "/",
-    element : <Body />,
-    errorElement : <Error />
+    element : <AppLayout />,
+    errorElement : <Error />,
   },
   {
     path : "/about",
-    element : <About />,
-    errorElement : <Error />
+    element : <About />
   },
   {
     path : "/contact",
-    element : <Contact />,
-    errorElement : <Error />
+    element : <Contact />
   },
   {
     path : "/cart",
-    element : <Cart />,
-    errorElement : <Error />
+    element : <Cart />
   }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<>
   <React.StrictMode>
-
-     
+      <Header />
+      <Body />
       <RouterProvider router={appRouter}></RouterProvider>
-   
   </React.StrictMode>
+</>
 );
 
 

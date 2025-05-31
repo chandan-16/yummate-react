@@ -1,9 +1,13 @@
 .restaurantCard {
     border-radius: 20px;
+    
 }
 
 .restaurantCard:hover {
-    box-shadow: 0px 0px 10px gray;
+   /* position: absolute; */
+   /* /* transform: scale(1.5);
+  transform: scale3d(1.5); */
+  /* transition: all 3s; */ 
 }
 
 .restaurantCard .resBanner {

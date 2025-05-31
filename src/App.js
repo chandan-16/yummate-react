@@ -1,28 +1,54 @@
-import { Routes, Route } from "react-router-dom";
+// import { createBrowserRouter, Outlet } from 'react-router-dom';
+// import { Routes, Route } from "react-router-dom";
+// import Body from './components/Body';
+// import Header from './components/Header';
 
-import Body from './components/Body';
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Cart from "./components/Cart";
-import Error from "./components/Error";
+// import About from './components/About';
+// import Contact from './components/Contact';
+// import Cart from './components/Cart';
+// import Error from './components/Error';
+// import './App.css';
+
+// const appRouter = createBrowserRouter([
+//   {
+//     path : "/",
+//     element : <App />,
+//     children : [
+//       {
+//         path : "/about",
+//         element : <About />,
+//       },
+//       {
+//         path : "/contact",
+//         element : <Contact />,
+//       },
+//       {
+//         path : "/cart",
+//         element : <Cart />,
+//       }      
+//     ],
+//     errorElement : <Error />,
+//   },
+// ]);
+
+// function App() {
+//   return (
+//     <div>
+//       {/* <Routes> */}
+//       {/* <Body /> */}
+//         {/* <Route path="/" element={<Body />} /> */}
+//         {/* <Route path="about" element={<About />} />
+//         <Route path="Contact" element={<Contact />} />
+//         <Route path="Cart" element={<Cart />} />
+//         <Route path="*" element={<Error />} /> */}
+//         {/* <Body /> */}
+//       {/* </Routes> */}
+      
+//     </div>
+//   );
+// }
 
 
 
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      {/* <Routes>
-        <Route path="/" element={<Body />} errorElement={<Error />} />
-        <Route path="/about" element={<About />} errorElement={<Error />} />
-        <Route path="/contact" element={<Contact />} errorElement={<Error />} />
-        <Route path="/cart" element={<Cart />} errorElement={<Error />} />
-        <Route path="/error" element={<Error/>} errorElement={<Error />} />
-      </Routes> */}
-    </div>
-  );
-}
-
-
-export default App;
+// export default App;
