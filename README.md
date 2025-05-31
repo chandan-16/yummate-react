@@ -24,3 +24,8 @@ YUMMATE FOOD ORDERING APP
 (Normal Javascript Utility functions) 
     - useState() --> Superpowerful State variables in React
     - useEffect()
+
+# Two Ypes of Routing in Web App 
+    - Client Side Youting
+    - Server Side Routing 
+ 
