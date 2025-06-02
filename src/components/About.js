@@ -23,7 +23,6 @@ const About = () => {
             <p className="border border-red-500 p-4 p-4"><span className="font-bold">500+</span> Cites PAN India</p>
           </div>
         </div>
-
       </div>
     </div>
   )

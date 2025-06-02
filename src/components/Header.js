@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import Logo from "../assets/yoshinoya-japaneese-kitchen-logo-png_seeklogo-370699.png";
-import Logo from "../assets/yummate-pink-logo.webp"
+import Logo from "../assets/free-food-delivery.webp"
 
 import "../components/Header.css"
 
@@ -12,8 +12,8 @@ const Header = () => {
   return (
     <div className="header w-full px-20 flex  mx-auto justify-between  text-center shadow shadow-lg">
         <div className="logo-container flex">
-            <img className="w-16 h-16 logo pb-1" src={Logo} alt="Yummate Logo" />
-            <h1 className="text-2xl text-gray-700 logoText">Yummate</h1>
+            <img className="w-26 h-20 logo pb-1 rounded-3xl" src={Logo} alt="Yummate Logo" />
+            <h1 className="text-3xl text-gray-700 logoText">Yummate</h1>
         </div>
         <div className="searchBox">
 
