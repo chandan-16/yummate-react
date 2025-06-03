@@ -1,6 +1,8 @@
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div className="bg-[#E2F8F0]">
+      
+    </div>
   )
 }
 

@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import Logo from "../assets/yoshinoya-japaneese-kitchen-logo-png_seeklogo-370699.png";
 import Logo from "../assets/free-food-delivery.webp"
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 import "../components/Header.css"
 
 const Header = () => {
 
   const [loginBtn, setLoginBtn] = useState(true);
+
+  const onLineStatus = useOnlineStatus();
+
 
   return (
     <div className="header w-full px-20 flex  mx-auto justify-between  text-center shadow shadow-lg">
@@ -15,11 +18,10 @@ const Header = () => {
             <img className="w-26 h-20 logo pb-1 rounded-3xl" src={Logo} alt="Yummate Logo" />
             <h1 className="text-3xl text-gray-700 logoText">Yummate</h1>
         </div>
-        <div className="searchBox">
 
-        </div>
-        <div className="nav-items px-2  py-2 flex ">
-            <ul className="flex justify-between w-70 pageList">
+        <div className="nav-items px-2 align-center py-2 flex ">
+            <ul className="flex justify-between w-110 pageList justify-center items-center">
+                
                 <li>
                   <Link to="/">Home</Link>
                 </li>
@@ -32,10 +34,11 @@ const Header = () => {
                 <li>
                   <Link to="/cart">Cart</Link>
                 </li>
-            </ul>
-            <div className="ml-16">
+                <li className="">{onLineStatus ? <p className="text-white bg-green-700 rounded-lg py-2 px-4 flex "><i className="bi bi-hand-thumbs-up pr-1"></i> Online</p> : <p className="flex  text-white bg-red-700 rounded-lg py-2 px-4"><i className="bi bi-hand-thumbs-down pr-1"></i> Offline</p> }</li>
                 <button onClick={() => setLoginBtn(!loginBtn)} className="login">{ loginBtn ? "Login" : "Logout" }</button>
-            </div>
+            </ul>
+            {/* <div className="ml-16">
+            </div> */}
         </div>
     </div>
   )

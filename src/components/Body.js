@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import RestaurantList from "../data/RestaurantList.json";
 import "../components/Body.css";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(RestaurantList);
@@ -13,7 +14,10 @@ const Body = () => {
   useEffect(()=>{
     const filteredList = listOfRestaurants.filter((res) => res.title.toLocaleLowerCase().includes(searchText.toLocaleLowerCase()));
     setFilteredRestaurant(filteredList)
-  },[searchText])
+  },[searchText]);
+
+  const onlineStatus = useOnlineStatus();
+  if(onlineStatus === false) return <h1 className="px-20 text-3xl text-center py-10">Looks like you're offline!! Please check your Internet Connection</h1>
 
     // Conditional Rendering
   if (listOfRestaurants === 0) {
@@ -24,7 +28,7 @@ const Body = () => {
     <div className="px-5 py-2 main-container">
       <h1 className="pt-8 font-extrabold text-3xl text-black-500 text-center">
         Restaurants with online{" "}
-        <span className="pt-10 font-extrabold text-5xl text-[#F14060]">
+        <span className="pt-10 font-extrabold text-5xl text-orange-500">
           Food Delivery In Pune
         </span>
       </h1>

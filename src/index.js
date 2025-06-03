@@ -13,6 +13,11 @@ import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import Footer from './components/Footer';
 
+// Chunking 
+// Code Splitting 
+// Dynamic Bundling 
+
+
 export const AppLayout = () => {
   return (
     <div className='app'>
