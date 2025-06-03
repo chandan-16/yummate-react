@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-
 import Header from './components/Header';
 import Body from './components/Body';
 import About from './components/About';
@@ -16,7 +15,10 @@ import Footer from './components/Footer';
 // Chunking 
 // Code Splitting 
 // Dynamic Bundling 
+// Lazy Loading 
+// Ondemand Loading 
 
+const Grocerry = lazy(() => import('./components/Grocerry'));
 
 export const AppLayout = () => {
   return (
@@ -44,6 +46,10 @@ const appRouter = createBrowserRouter([
       {
         path : "/contact",
         element : <Contact />
+      },
+      {
+        path : "/grocerry",
+        element : <Suspense fallback={<h1 className='text-center text-5xl py-10'>Loading...</h1>}> <Grocerry /> </Suspense> 
       },
       {
         path : "/cart",

@@ -20,7 +20,7 @@ const Header = () => {
         </div>
 
         <div className="nav-items px-2 align-center py-2 flex ">
-            <ul className="flex justify-between w-110 pageList justify-center items-center">
+            <ul className="flex justify-between w-120 pageList justify-center items-center mr-20">
                 
                 <li>
                   <Link to="/">Home</Link>
@@ -34,7 +34,12 @@ const Header = () => {
                 <li>
                   <Link to="/cart">Cart</Link>
                 </li>
-                <li className="">{onLineStatus ? <p className="text-white bg-green-700 rounded-lg py-2 px-4 flex "><i className="bi bi-hand-thumbs-up pr-1"></i> Online</p> : <p className="flex  text-white bg-red-700 rounded-lg py-2 px-4"><i className="bi bi-hand-thumbs-down pr-1"></i> Offline</p> }</li>
+                <li>
+                  <Link to="/grocerry">Grocery</Link>
+                </li>
+                <li>
+                  {onLineStatus ? <p className="text-white bg-green-700 rounded-lg py-2 px-4 flex "><i className="bi bi-hand-thumbs-up pr-1"></i> Online</p> : <p className="flex  text-white bg-red-700 rounded-lg py-2 px-4"><i className="bi bi-hand-thumbs-down pr-1"></i> Offline</p> }
+                </li>
                 <button onClick={() => setLoginBtn(!loginBtn)} className="login">{ loginBtn ? "Login" : "Logout" }</button>
             </ul>
             {/* <div className="ml-16">
