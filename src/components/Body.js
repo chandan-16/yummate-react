@@ -1,11 +1,14 @@
 import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import RestaurantList from "../data/RestaurantList.json";
 import "../components/Body.css";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   const [listOfRestaurants, setListOfRestaurants] = useState(RestaurantList);
   const [filteredRestaurent, setFilteredRestaurant] = useState(listOfRestaurants);
 
@@ -24,6 +27,7 @@ const Body = () => {
     return <Shimmer />;
   }
 
+
   return (
     <div className="px-5 py-2 main-container">
       <h1 className="pt-8 font-extrabold text-3xl text-black-500 text-center">
@@ -41,6 +45,8 @@ const Body = () => {
           className="w-100 py-3 pl-2 searchBox"
           value={searchText}
         />
+
+        <input type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
       </div>
       <div className="flex p-10 w-full p-4 flex-wrap justify-center">
         {filteredRestaurent.map((restaurant) => (

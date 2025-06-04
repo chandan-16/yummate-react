@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useContext} from "react";
 import { Link } from "react-router-dom";
 // import Logo from "../assets/yoshinoya-japaneese-kitchen-logo-png_seeklogo-370699.png";
 import Logo from "../assets/free-food-delivery.webp"
 import useOnlineStatus from "../utils/useOnlineStatus";
 import "../components/Header.css"
+import UserContext from "../utils/userContext";
 
 const Header = () => {
 
@@ -11,6 +12,8 @@ const Header = () => {
 
   const onLineStatus = useOnlineStatus();
 
+  const { loggedInUser } = useContext(UserContext);
+  console.log(loggedInUser);
 
   return (
     <div className="header w-full px-20 flex  mx-auto justify-between  text-center shadow shadow-lg">
@@ -41,6 +44,9 @@ const Header = () => {
                   {onLineStatus ? <p className="text-white bg-green-700 rounded-lg py-2 px-4 flex "><i className="bi bi-hand-thumbs-up pr-1"></i> Online</p> : <p className="flex  text-white bg-red-700 rounded-lg py-2 px-4"><i className="bi bi-hand-thumbs-down pr-1"></i> Offline</p> }
                 </li>
                 <button onClick={() => setLoginBtn(!loginBtn)} className="login">{ loginBtn ? "Login" : "Logout" }</button>
+                <li>
+                  { loggedInUser }
+                </li>
             </ul>
             {/* <div className="ml-16">
             </div> */}
