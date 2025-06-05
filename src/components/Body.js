@@ -4,10 +4,10 @@ import Shimmer from "./Shimmer";
 import RestaurantList from "../data/RestaurantList.json";
 import "../components/Body.css";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/userContext";
+// import cartContext from "../utils/cartContext";
 
 const Body = () => {
-  const { loggedInUser, setUserName } = useContext(UserContext);
+  // const { loggedInUser, setUserName } = useContext(cartContext);
 
   const [listOfRestaurants, setListOfRestaurants] = useState(RestaurantList);
   const [filteredRestaurent, setFilteredRestaurant] = useState(listOfRestaurants);
@@ -46,7 +46,7 @@ const Body = () => {
           value={searchText}
         />
 
-        <input type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} />
+        {/* <input type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} /> */}
       </div>
       <div className="flex p-10 w-full p-4 flex-wrap justify-center">
         {filteredRestaurent.map((restaurant) => (
