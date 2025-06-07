@@ -1,13 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import RestaurantList from "../data/RestaurantList.json";
 import "../components/Body.css";
 import useOnlineStatus from "../utils/useOnlineStatus";
-// import cartContext from "../utils/cartContext";
 
 const Body = () => {
-  // const { loggedInUser, setUserName } = useContext(cartContext);
 
   const [listOfRestaurants, setListOfRestaurants] = useState(RestaurantList);
   const [filteredRestaurent, setFilteredRestaurant] = useState(listOfRestaurants);
@@ -26,7 +24,6 @@ const Body = () => {
   if (listOfRestaurants === 0) {
     return <Shimmer />;
   }
-
 
   return (
     <div className="px-5 py-2 main-container">

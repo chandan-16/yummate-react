@@ -14,8 +14,6 @@ const RestaurantMenu = () => {
    const { id } = useParams();
 
   const restaurant = RestaurantList.filter(res => res['web-scraper-order'] === id)[0]
-  console.log("@@@id",id)
-  console.log("@@@restaurant",restaurant);
 
   // If no dependency array => useEffect is called on every render 
   // If the dependency array is empty => useEffect is called on only initial render and just once 
@@ -35,24 +33,11 @@ const RestaurantMenu = () => {
 
   const menu = getRandomObjects(RestaurantMenuData);
 
-    // const getRandom20 = () => {
-    //   const shuffled = [...RestaurantMenuData].sort(() => 0.5 - Math.random());
-    //   setRestaurantInfo(shuffled.slice(0, 20));
-    // };
-
-  // useEffect(() => {
-  // getRandom20()    
-  // },[])
-
-    console.log("restaurantmenu data", menu);
-
     if(menu === null){
         return (
             <Shimmer />
         )
     }
-
-    console.log(menu.name)
 
     return(
         <div>
@@ -60,7 +45,7 @@ const RestaurantMenu = () => {
           {/* Rendered Restaurant Info from const restaurant*/}
           <div className="px-20  mt-5 pt-10 mx-auto bg-purlpe-600 w-full">
             <Link to="/">
-              <button className="px-5 py-2 border text-white bg-gray-800 hover:text-red rounded border-3font-bold hover:bg-blue-700 hover:bg-gray-600 cursor-pointer"><i class="bi bi-arrow-left font-bold text-bold"></i> Back</button>
+              <button className="px-5 py-2 border text-white bg-gray-800 hover:text-red rounded border-3font-bold hover:bg-blue-700 hover:bg-gray-600 cursor-pointer"><i className="bi bi-arrow-left font-bold text-bold"></i> Back</button>
             </Link>
             <h2 className="font-bold text-3xl py-4">{restaurant.title}</h2>
             <ul className="w-full bg-gradient-to-b p-2 from-slate-50 to=[#DFDFE7] border border p-8 rounded rounded-lg">
@@ -72,8 +57,8 @@ const RestaurantMenu = () => {
             <h2 className=" font-bold text-center pt-10 pb-6 text-orange-600 text-3xl italic">"From snacks to full meals, our menu brings delicious choices straight to your screen <span className="italic text-xl text-black">- browse, choose, and satisfy your cravings instantly."</span></h2>
           </div>
         {
-          menu.map((restaurantList) => (
-            <RestaurantMenuItem key={restaurantList['web-scraper-order']} restaurantList={restaurantList} />
+          menu.map((menuItem) => (
+            <RestaurantMenuItem key={menuItem['web-scraper-order']} menuItem={menuItem} />
           ))  
         }
         </div>

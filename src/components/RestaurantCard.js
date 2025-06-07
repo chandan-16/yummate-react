@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "../components/RestaurantCard.css";
 
 const RestaurantCard = ({restaurant}) => {
-// console.log("@@@restaurant",restaurant)
   const { title, ratingAndTime, category, area } = restaurant;
   const path = "/restaurant/" + restaurant['web-scraper-order'];
   return (
@@ -12,7 +11,7 @@ const RestaurantCard = ({restaurant}) => {
         <h3 className="text-lg text-left py-2 title">{title}</h3>
         <p className="pt-1 flex">
           <span><i className="bi bi-star px-2 py-1 rating text-white"></i></span>
-          <span className="pl-1 text-md"> {ratingAndTime}</span>
+          <span className="pl-1 text-md">{ratingAndTime}</span>
         </p>
         <p className="text-gray-400 text-left pt-2">{category}</p>
         <p className="text-gray-400 text-left pt-1">{area}</p>

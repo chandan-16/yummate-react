@@ -1,12 +1,15 @@
-import { useState, useContext} from "react";
+import { useState} from "react";
 import { Link } from "react-router-dom";
 // import Logo from "../assets/yoshinoya-japaneese-kitchen-logo-png_seeklogo-370699.png";
 import Logo from "../assets/free-food-delivery.webp"
 // import useOnlineStatus from "../utils/useOnlineStatus";
 import "../components/Header.css"
-// import cartSlice from "../utils/cartSlice";
+
+import { useSelector } from "react-redux";
 
 const Header = () => {
+
+  const cartItem = useSelector(state => state.cartState.cartList);
 
   const [loginBtn, setLoginBtn] = useState(true);
 
@@ -14,6 +17,7 @@ const Header = () => {
 
   // const { loggedInUser } = useContext(cartContext);
   // console.log(loggedInUser);
+
 
   return (
     <div className="header w-full px-20 flex  mx-auto justify-between  text-center shadow shadow-lg">
@@ -37,8 +41,8 @@ const Header = () => {
                 <li>
                   <Link to="/grocerry">Grocery</Link>
                 </li>                
-                <li>
-                  <Link to="/cart">Cart</Link>
+                <li className="flex justify-between">
+                  <Link to="/cart">Cart <span>{cartItem.length}</span></Link>
                 </li>
                 <li>
                   {/* {onLineStatus ? <p className="text-white bg-green-700 rounded-lg py-2 px-4 flex "><i className="bi bi-hand-thumbs-up pr-1"></i> Online</p> : <p className="flex  text-white bg-red-700 rounded-lg py-2 px-4"><i className="bi bi-hand-thumbs-down pr-1"></i> Offline</p> } */}
