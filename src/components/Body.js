@@ -26,26 +26,26 @@ const Body = () => {
   }
 
   return (
-    <div className="px-5 py-2 main-container">
-      <h1 className="pt-8 font-extrabold text-3xl text-black-500 text-center">
+    <div className="px-4 md:px-8 lg:px-20 pt-32 pb-20 main-container max-w-screen-xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-gray-800 mb-6">
         Restaurants with online{" "}
-        <span className="pt-10 font-extrabold text-5xl text-orange-500">
+        <span className="block text-orange-500 text-3xl sm:text-4xl md:text-5xl mt-2">
           Food Delivery In Pune
         </span>
-      </h1>
+      </h1> 
 
-      <div className="filter mx-auto w-115 pt-3">
+      <div className="w-full max-w-2xl mx-auto mt-6 mb-10">
         <input
           type="text"
           onChange={(e) => setSearchText(e.target.value)}
           placeholder="Search for restaurants and food"
-          className="w-100 py-3 pl-2 searchBox"
+          className="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
           value={searchText}
         />
 
         {/* <input type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)} /> */}
       </div>
-      <div className="flex p-10 w-full p-4 flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center gap-6">
         {filteredRestaurent.map((restaurant) => (
           <RestaurantCard
             key={restaurant['web-scraper-order']}

@@ -1,40 +1,55 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { remove } from "../utils/cartSlice";
 
-const Cart = () => {
 
+const Cart = (menuItem={menuItem}) => {
+
+  const dispatch = useDispatch();
   const cartItem = useSelector(state => state.cartState.cartList);
   const total = useSelector(state => state.cartState.total);
 
-  console.log("cartlist", cartItem);
-  console.log("total", total);
-
   return (
-    <div className="bg-[#E2F8F0] mx-20 py-20">
-    {
-      cartItem.map((item) => (
-        <div key={item["web-scraper-order"]} className="mb-6 flex justify-between">
-          <div className="flex justify-between">
-            <div>
-              <img src={  item["image-src"]} alt="Item" className="w-38 h-38 object-cover" />
-            </div>
+    <div className="px-4 sm:px-10 md:px-20 py-36 max-w-6xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-8">Your Cart</h1>
 
-            <div className="pl-5">
-              <p className="font-semibold text-2xl">{item.name}</p>
-              <p className="text-2xl py-1">₹{item.price}</p>
-              <p>Area: Pune</p>
-              <button className="bg-red-600 mt-3 text-white rounded px-2 py-1 hover:bg-red-700 cursor-pointer">Delete</button>
+      {cartItem.length === 0 ? (
+        <p className="text-center text-gray-600 text-xl">Your cart is empty.</p>
+      ) : (
+        cartItem.map((item) => (
+          <div
+            key={item["web-scraper-order"]}
+            className="mb-6 flex flex-col sm:flex-row items-center sm:items-start sm:justify-between border-b pb-4"
+          >
+            <div className="flex flex-col sm:flex-row items-center sm:items-start">
+              <img
+                src={item["image-src"]}
+                alt="Item"
+                className="w-24 h-24 object-cover rounded-lg"
+              />
+              <div className="sm:pl-5 mt-3 sm:mt-0 text-center sm:text-left">
+                <p className="font-semibold text-lg sm:text-xl">{item.name}</p>
+                <p className="text-lg py-1 text-gray-700">₹{item.price}</p>
+                <button
+                  onClick={() => dispatch(remove(item))}
+                  className="bg-red-600 mt-2 text-white rounded px-4 py-2 hover:bg-red-700 transition"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
-
           </div>
+        ))
+      )}
 
+      {cartItem.length > 0 && (
+        <div className="pt-6">
+          <hr className="mb-4" />
+          <h2 className="text-xl font-semibold">
+            Total Amount to Pay:{" "}
+            <span className="text-orange-600 text-3xl font-bold">₹{total}</span>
+          </h2>
         </div>
-
-    ))}
-
-    <div className="px=5">
-        <h1>Total Amount to Pay:</h1>
-        <p>{total}</p>
-    </div>
+      )}
     </div>
   )
 }

@@ -20,40 +20,31 @@ const Header = () => {
 
 
   return (
-    <div className="header w-full px-20 flex  mx-auto justify-between  text-center shadow shadow-lg">
-        <div className="logo-container flex">
-            <img className="w-26 h-20 logo pb-1 rounded-3xl" src={Logo} alt="Yummate Logo" />
-            <h1 className="text-3xl text-gray-700 logoText">Yummate</h1>
-        </div>
+    <div className="header w-full px-6 md:px-10 lg:px-20 flex flex-col md:flex-row py-3 items-center justify-between text-center shadow shadow-lg fixed top-0 left-0 bg-white z-50">
+      <div className="logo-container flex items-center gap-2 mb-4 md:mb-0">
+        <img className="w-16 h-12 md:w-20 md:h-20 rounded-3xl" src={Logo} alt="Yummate Logo" />
+        <h1 className="text-2xl md:text-3xl font-semibold text-gray-700">Yummate</h1>
+      </div>
 
-        <div className="nav-items px-2 align-center py-2 flex ">
-            <ul className="flex justify-between w-120 pageList justify-center items-center mr-20">
-                
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link> 
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-                <li>
-                  <Link to="/grocerry">Grocery</Link>
-                </li>                
-                <li className="flex justify-between">
-                  <Link to="/cart">Cart <span>{cartItem.length}</span></Link>
-                </li>
-                <li>
-                  {/* {onLineStatus ? <p className="text-white bg-green-700 rounded-lg py-2 px-4 flex "><i className="bi bi-hand-thumbs-up pr-1"></i> Online</p> : <p className="flex  text-white bg-red-700 rounded-lg py-2 px-4"><i className="bi bi-hand-thumbs-down pr-1"></i> Offline</p> } */}
-                </li>
-                <button onClick={() => setLoginBtn(!loginBtn)} className="login">{ loginBtn ? "Login" : "Logout" }</button>
-                <li>
-                  {/* { loggedInUser } */}
-                </li>
-            </ul>
-        </div>
-    </div>
+      <div className="nav-items w-full md:w-auto">
+        <ul className="flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-6 text-sm md:text-base">
+          <li><Link to="/" className="hover:text-orange-600">Home</Link></li>
+          <li><Link to="/about" className="hover:text-orange-600">About</Link></li>
+          <li><Link to="/contact" className="hover:text-orange-600">Contact</Link></li>
+          <li><Link to="/grocerry" className="hover:text-orange-600">Grocery</Link></li>
+          <li className="relative">
+            <Link to="/cart" className="hover:text-orange-600">
+              Cart <span className="ml-1 text-orange-600 font-bold">({cartItem.length})</span>
+            </Link>
+          </li>
+          <li>
+            <button onClick={() => setLoginBtn(!loginBtn)} className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded-lg transition-all duration-300">
+              {loginBtn ? "Login" : "Logout"}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>    
   )
 }
 
