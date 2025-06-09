@@ -7,7 +7,12 @@ const About = () => {
         <h2 className="bg-gray-600 text-lg sm:text-xl italic font-normal text-white text-center py-6 sm:py-8 px-4">
           ″Our mission is to elevate the quality of life for the urban consumer with unparalleled convenience. Convenience is what makes us tick. It's what makes us get out of bed and say, "Let's do this."
         </h2>
-        <img className="w-full h-auto mt-6 rounded-lg shadow" src={AboutBanner} alt="About Banner Image" />
+    
+        <img
+        className="w-full h-auto mt-6 rounded-lg shadow"
+        src={AboutBanner} 
+        alt="About Banner Image"
+      />
       </div>
 
       <h3 className="text-black text-center text-2xl sm:text-3xl md:text-4xl font-bold mt-10 pb-4">

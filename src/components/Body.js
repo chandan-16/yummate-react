@@ -7,7 +7,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
 
-  const [listOfRestaurants, setListOfRestaurants] = useState(RestaurantList);
+  const [ listOfRestaurants ] = useState(RestaurantList);
   const [filteredRestaurent, setFilteredRestaurant] = useState(listOfRestaurants);
 
   const [searchText, setSearchText] = useState("");

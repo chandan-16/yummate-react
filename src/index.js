@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -24,16 +24,6 @@ import appStore from './utils/appStore';
 const Grocerry = lazy(() => import('./components/Grocerry'));
 
 export const AppLayout = () => {
-
-
-  // const [userName, setUserName] = useState();
-
-  // useEffect(() => {
-  //   const data = {
-  //     name : "Chandan Gautam"
-  //   }
-  //   setUserName(data.name)
-  // },[])
 
   return (
    

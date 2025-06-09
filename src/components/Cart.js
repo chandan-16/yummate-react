@@ -1,9 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../utils/cartSlice";
 
-
-const Cart = (menuItem={menuItem}) => {
-
+const Cart = () => {
   const dispatch = useDispatch();
   const cartItem = useSelector(state => state.cartState.cartList);
   const total = useSelector(state => state.cartState.total);
@@ -51,7 +49,7 @@ const Cart = (menuItem={menuItem}) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default Cart;
