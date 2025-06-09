@@ -11,7 +11,7 @@ const About = () => {
         <img
         className="w-full h-auto mt-6 rounded-lg shadow"
         src={AboutBanner} 
-        alt="About Banner Image"
+        alt="About Banner"
       />
       </div>
 
