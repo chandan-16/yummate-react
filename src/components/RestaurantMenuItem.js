@@ -5,9 +5,7 @@ const RestaurantMenuItem = ({menuItem}) => {
 
   const dispatch = useDispatch();
 
-
   const { name, price, rating, description, } = menuItem;
-
 
   return (
     <div className="w-full px-4 sm:px-10 md:px-20 py-6 border-b">
