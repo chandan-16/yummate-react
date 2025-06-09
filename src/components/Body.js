@@ -26,8 +26,8 @@ const Body = () => {
   }
 
   return (
-    <div className="px-4 md:px-8 lg:px-20 pt-32 pb-20 main-container max-w-screen-xl mx-auto">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-gray-800 mb-6">
+    <div className="px-4 md:px-8 lg:px-20 pt-32 pb-20 pt-2 main-container max-w-screen-xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl pt-6 font-extrabold text-center text-gray-800 mb-6">
         Restaurants with online{" "}
         <span className="block text-orange-500 text-3xl sm:text-4xl md:text-5xl mt-2">
           Food Delivery In Pune

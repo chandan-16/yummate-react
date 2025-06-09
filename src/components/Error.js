@@ -1,4 +1,6 @@
 import { useRouteError } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 
 const Error = () => {
 
@@ -12,9 +14,9 @@ const Error = () => {
         <p className="text-xl text-gray-700 mb-2">Something went wrong.</p>
         <p className="text-md text-gray-500 mb-2">Status: <span className="font-semibold">{err.status}</span></p>
         <p className="text-md text-gray-500">Message: <span className="font-semibold">{err.statusText || "Unexpected Error"}</span></p>
-        <a href="/" className="inline-block mt-6 px-5 py-2 text-white bg-orange-500 rounded hover:bg-orange-600 transition duration-200">
+        <Link to="/" className="inline-block mt-6 px-5 py-2 text-white bg-orange-500 rounded hover:bg-orange-600 transition duration-200">
           Go to Home
-        </a>
+        </Link>
       </div>
     </div>
   )

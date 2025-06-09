@@ -1,8 +1,9 @@
 const Contact = () => {
   return (
-    <div className="px-4 sm:px-10 md:px-20 py-10 max-w-screen-lg mx-auto">
+    <div className="px-4 sm:px-10 md:px-20 py-10 pt-44 max-w-screen-lg mx-auto">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold pb-6 text-center">Contact Us</h2>
       <form className="p-6 sm:p-10 border border-gray-300 rounded-xl shadow-md bg-white">
+        
         <p className="text-lg sm:text-xl font-medium block pb-2 ">Name</p>
         <input className="border w-full py-2 px-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 mb-4" type="text" placeholder="Enter Your Name" />
 
@@ -18,4 +19,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

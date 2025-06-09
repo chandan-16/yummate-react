@@ -31,7 +31,7 @@ const Cart = (menuItem={menuItem}) => {
                 <p className="text-lg py-1 text-gray-700">₹{item.price}</p>
                 <button
                   onClick={() => dispatch(remove(item))}
-                  className="bg-red-600 mt-2 text-white rounded px-4 py-2 hover:bg-red-700 transition"
+                  className="bg-red-600 mt-2 text-white rounded px-3 py-1 hover:bg-red-700 transition"
                 >
                   Delete
                 </button>
