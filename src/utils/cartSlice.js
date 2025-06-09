@@ -16,8 +16,9 @@ const cartSlice = createSlice({
         },
         remove(state, action){
             console.log("action ----->", action)
-            const updatedCartList = state.cartList.filter(item => item.id !== action.payload.id);
-            const total = Number(action.payload.price) - state.total;
+            const updatedCartList = state.cartList.filter(item => item["web-scraper-order"] !== action.payload["web-scraper-order"]);
+            console.log("Another console for delete button", state.cartList);
+            const total = state.total - Number(action.payload.price) ;
             return { ...state, total : total,  cartList : updatedCartList }
         }
     }

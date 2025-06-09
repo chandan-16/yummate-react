@@ -4,6 +4,7 @@ import { remove } from "../utils/cartSlice";
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItem = useSelector(state => state.cartState.cartList);
+  console.log("cartItem----->", cartItem);
   const total = useSelector(state => state.cartState.total);
 
   return (

@@ -1,6 +1,6 @@
 import { useState} from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/free-food-delivery.webp"
+import Logo from "../assets/free-food-delivery.png"
 // import useOnlineStatus from "../utils/useOnlineStatus";
 import "../components/Header.css"
 
@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div className="header w-full px-6 md:px-10 lg:px-20 flex flex-col md:flex-row py-2 items-center justify-between text-center shadow shadow-lg fixed top-0 left-0 bg-white z-50">
       <div className="logo-container flex items-center gap-2 mb-4 md:mb-0">
-        <img className="w-8 h-8 md:w-20 md:h-20 rounded-3xl" src={Logo} alt="Yummate Logo" />
+        <img className="w-15 h-12 md:w-26 md:h-20 rounded-3xl" src={Logo} alt="Yummate Logo" />
         <h1 className="text-2xl md:text-3xl font-semibold text-gray-700">Yummate</h1>
       </div>
 
