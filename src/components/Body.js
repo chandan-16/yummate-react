@@ -15,7 +15,7 @@ const Body = () => {
   useEffect(()=>{
     const filteredList = listOfRestaurants.filter((res) => res.title.toLocaleLowerCase().includes(searchText.toLocaleLowerCase()));
     setFilteredRestaurant(filteredList)
-  },[searchText]);
+  },[searchText, listOfRestaurants]);
 
   const onlineStatus = useOnlineStatus();
   if(onlineStatus === false) return <h1 className="px-20 text-3xl text-center py-10">Looks like you're offline!! Please check your Internet Connection</h1>
