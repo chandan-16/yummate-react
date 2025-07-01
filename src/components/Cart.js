@@ -4,11 +4,10 @@ import { remove } from "../utils/cartSlice";
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItem = useSelector(state => state.cartState.cartList);
-  console.log("cartItem----->", cartItem);
   const total = useSelector(state => state.cartState.total);
 
   return (
-    <div className="px-4 sm:px-10 md:px-20 py-36 max-w-6xl mx-auto">
+    <div className="px-4 sm:px-10 md:px-20 py-36 max-w-6xl mx-auto h-230">
       <h1 className="text-2xl sm:text-3xl font-bold mb-8">Your Cart</h1>
 
       {cartItem.length === 0 ? (

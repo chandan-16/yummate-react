@@ -21,8 +21,8 @@ const Header = () => {
   return (
     <div className="header w-full px-6 md:px-10 lg:px-20 flex flex-col md:flex-row py-2 items-center justify-between text-center shadow shadow-lg fixed top-0 left-0 bg-white z-50">
       <div className="logo-container flex items-center gap-2 mb-4 md:mb-0">
-        <img className="w-15 h-12 md:w-26 md:h-20 rounded-3xl" src={Logo} alt="Yummate Logo" />
-        <h1 className="text-2xl md:text-3xl font-semibold text-gray-700">Yummate</h1>
+        <img className="w-7 h-7 md:w-16 md:h-14 rounded-3xl" src={Logo} alt="Yummate Logo" />
+        <h1 className="text-2xl md:text-2xl font-semibold text-gray-700">Yummate</h1>
       </div>
 
       <div className="nav-items w-full md:w-auto">

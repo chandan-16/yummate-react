@@ -17,7 +17,7 @@ const RestaurantMenuItem = ({menuItem}) => {
           <h2 className="font-bold text-lg sm:text-xl text-gray-800 hover:underline cursor-pointer">{name}</h2>
           <p className="text-base text-gray-700 pt-1">₹{price}</p>
           <p className="text-sm text-gray-500 pt-2" >{description}</p>
-          <p className="text-md mt-2"><i className="bi bi-star bg-green-600 text-white px-2 py-1 rounded-full mr-2"></i> {rating}</p>
+          <p className="text-md mt-2"><i className="bi bi-star bg-green-600 text-white px-2 py-1 rounded-full mr-2"></i>{rating}</p>
           <button onClick={() => dispatch(add(menuItem))} className="mt-4 bg-white border border-green-600 text-green-600 px-5 py-2 rounded hover:bg-green-600 hover:text-white transition duration-200">ADD</button>
         </div>
       </div>
