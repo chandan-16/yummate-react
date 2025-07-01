@@ -43,7 +43,7 @@ const RestaurantMenu = () => {
         <div>
           {/* Back Button */}
           {/* Rendered Restaurant Info from const restaurant*/}
-          <div className="px-20  mt-5 pt-10 mx-auto bg-purlpe-600 w-full">
+          <div className="px-20  mt-5 pt-20 mx-auto bg-purlpe-600 w-full">
             <Link to="/">
               <button className="px-5 py-2 border text-white bg-gray-800 hover:text-red rounded border-3font-bold hover:bg-blue-700 hover:bg-gray-600 cursor-pointer"><i className="bi bi-arrow-left font-bold text-bold"></i> Back</button>
             </Link>
